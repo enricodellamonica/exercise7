@@ -1,0 +1,11 @@
+﻿<Window x:Class="WpfEntity.Reports"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Reports" Height="300" Width="300">
+    <Grid>
+        <Button Content="GenerateReport" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Margin="10,224,0,0"/>
+        <Button Content="ViewData" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Margin="161,224,0,0"/>
+        <DataGrid VerticalAlignment="Top" Margin="10,0" Height="27"/>
+
+    </Grid>
+</Window>
