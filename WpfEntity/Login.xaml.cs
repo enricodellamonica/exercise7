@@ -28,14 +28,19 @@ namespace WpfEntity {
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //var users = new User(textbox1.Text,textbox2.Text);
-            //label1.Content=users.UserName;
 
-            var conn = Db.GetSqlConnection();
-            var sda = new SqlDataAdapter("Select Count(*) From Users where UserName='" + textbox1.Text + "'And Password='" + textbox2.Text + "'", conn);
-            var dt = new DataTable();
-            sda.Fill(dt);
-            if(dt.Rows[0][0].ToString() == "1") {
+            //var conn = Db.GetSqlConnection();
+            //var sda = new SqlDataAdapter("Select Count(*) From Users where UserName='" + textbox1.Text + "'And Password='" + textbox2.Text + "'", conn);
+            //var dt = new DataTable();
+            //sda.Fill(dt);
+            //var row = dt.Rows[0][0].ToString();
+            //if(row == "1")
+            var user = new User(textbox1.Text,textbox2.Text);
+            if (user.Login)
+            
+            {
+                //var id = new Expense();
+                //id.UserId = Convert.ToInt32(row);
 
                 Hide();
                 var win = new MainWindow();

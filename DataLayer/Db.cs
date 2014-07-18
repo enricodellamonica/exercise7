@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer {
     public class Db {
+        //public static int UserId { get; set; }
         public static string ConnectionString {
             get
             {

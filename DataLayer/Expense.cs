@@ -13,7 +13,7 @@ namespace DataLayer {
             using(var cmd = conn.CreateCommand()) {
                 cmd.CommandText = @"Insert Into Expenses (Date,Product,Remark,Price,User_Id) values('{0}','{1}','{2}','{3}','{4}')";
                 cmd.CommandText = string.Format(cmd.CommandText, Date, Product, Remark,
-                    Price.ToString(CultureInfo.InvariantCulture), UserId.ToString(CultureInfo.InvariantCulture));
+                    Price.ToString(CultureInfo.InvariantCulture), User.Id.ToString(CultureInfo.InvariantCulture));
                  cmd.ExecuteNonQuery();
                 
 
@@ -30,10 +30,6 @@ namespace DataLayer {
             set;
             }
         public float Price {
-            get;
-            set;
-            }
-        public int UserId {
             get;
             set;
             }

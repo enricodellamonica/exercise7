@@ -37,10 +37,10 @@ namespace WpfEntity {
 
         private void Submit_Click(object sender, RoutedEventArgs e) {
             var exp = new Expense();
-            //exp.Date = BoxDay.Text;
-            //exp.Product = (string) Combo.SelectedItem;
-            //exp.Price = float.Parse(BoxPrice.Text);
-            //exp.Remark = BoxRemark.Text;
+            exp.Date = BoxDay.Text;
+            exp.Product = (string)Combo.SelectedItem;
+            exp.Price = float.Parse(BoxPrice.Text);
+            exp.Remark = BoxRemark.Text;
             exp.SendToDb();
         }
 
