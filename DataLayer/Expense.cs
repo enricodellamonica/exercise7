@@ -6,14 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DataLayer {
-    public class Expense {
+    public class Expense
+    {
+        public static int Id { get; set; }
         public void SendToDb() 
         {
         using(var conn = Db.GetSqlConnection()) {
             using(var cmd = conn.CreateCommand()) {
                 cmd.CommandText = @"Insert Into Expenses (Date,Product,Remark,Price,User_Id) values('{0}','{1}','{2}','{3}','{4}')";
                 cmd.CommandText = string.Format(cmd.CommandText, Date, Product, Remark,
-                    Price.ToString(CultureInfo.InvariantCulture), User.Id.ToString(CultureInfo.InvariantCulture));
+                    Price.ToString(CultureInfo.InvariantCulture), Id.ToString(CultureInfo.InvariantCulture));
                  cmd.ExecuteNonQuery();
                 
 

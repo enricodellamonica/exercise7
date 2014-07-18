@@ -12,7 +12,6 @@ namespace DataLayer
     public class User
     {
         public bool Login = false;
-        public static int Id { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
 
@@ -27,7 +26,7 @@ namespace DataLayer
                     var reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        Id = Int32.Parse(reader["Id"].ToString());
+                        Expense.Id = Int32.Parse(reader["Id"].ToString());
                         Login = true;
                     }
                 }

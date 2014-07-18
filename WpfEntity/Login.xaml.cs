@@ -48,6 +48,7 @@ namespace WpfEntity {
                 }
             else {
                 MessageBox.Show("username or password is invalid");
+               
                 }
         }
 

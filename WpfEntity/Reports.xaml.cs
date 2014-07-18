@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using DataLayer;
 
 namespace WpfEntity {
     /// <summary>
@@ -20,5 +22,13 @@ namespace WpfEntity {
         public Reports() {
             InitializeComponent();
             }
+
+        private void View_Click(object sender, RoutedEventArgs e)
+        {
+            var fetch = new FetchData(Expense.Id);
+            DataGrid1.ItemsSource = fetch.dt.DefaultView;
+            
+
+        }
         }
     }

@@ -4,8 +4,9 @@
         Title="Reports" Height="300" Width="300">
     <Grid>
         <Button Content="GenerateReport" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Margin="10,224,0,0"/>
-        <Button Content="ViewData" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Margin="161,224,0,0"/>
-        <DataGrid VerticalAlignment="Top" Margin="10,0" Height="27"/>
+        <Button x:Name="View" Content="ViewData" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Margin="161,224,0,0" Click="View_Click"/>
+        <DataGrid x:Name="DataGrid1" AutoGenerateColumns="True" Height="192" Width="190" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
 
     </Grid>
 </Window>
