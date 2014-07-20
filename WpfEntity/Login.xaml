@@ -8,12 +8,12 @@
             <ColumnDefinition Width="227*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="label1" Content="UserName" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,55,0,0" RenderTransformOrigin="0.492,0.231" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="23" Margin="54,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="54,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="23" Margin="54,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1" TabIndex="1"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="54,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1" TabIndex="0"/>
         <Label Content="Password
                
                " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,146,0,0" Grid.ColumnSpan="2"/>
-        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="54,225,0,0" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="54,225,0,0" Grid.Column="1" Click="Button_Click" TabIndex="2"/>
 
     </Grid>
 </Window>

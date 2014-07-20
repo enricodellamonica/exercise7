@@ -11,26 +11,35 @@ namespace DataLayer
 {
     public class User
     {
-        public bool Login = false;
+
         public string UserName { get; set; }
         public string Password { get; set; }
-
-        public User(string box1, string box2)
+        public bool CheckUserAuthetication(string box1, string box2)
         {
-            using (var conn = Db.GetSqlConnection())
+            try
             {
-                using (var cmd = conn.CreateCommand())
+                using (var conn = Db.GetSqlConnection())
                 {
-                    cmd.CommandText = @"Select * From Users where UserName='{0}' And Password='{1}'";
-                    cmd.CommandText = string.Format(cmd.CommandText, box1, box2);
-                    var reader = cmd.ExecuteReader();
-                    if (reader.Read())
+                    using (var cmd = conn.CreateCommand())
                     {
-                        Expense.Id = Int32.Parse(reader["Id"].ToString());
-                        Login = true;
+                        cmd.CommandText = @"Select * From Users where UserName='{0}' And Password='{1}'";
+                        cmd.CommandText = string.Format(cmd.CommandText, box1, box2);
+                        var reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            Expense.Id = Int32.Parse(reader["Id"].ToString());
+                            return true;
+                        }
                     }
                 }
             }
+            catch (Exception exp)
+            {
+
+                return false;
+            }
+            return false;
         }
+
     }
 }

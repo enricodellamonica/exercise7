@@ -34,9 +34,9 @@ namespace WpfEntity {
             //var dt = new DataTable();
             //sda.Fill(dt);
             //var row = dt.Rows[0][0].ToString();
-            //if(row == "1")
-            var user = new User(textbox1.Text,textbox2.Text);
-            if (user.Login)
+            //if(row == "1")  
+            var user = new User();
+            if(user.CheckUserAuthetication(textbox1.Text, textbox2.Text))
             
             {
                 //var id = new Expense();
