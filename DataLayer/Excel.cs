@@ -22,7 +22,7 @@ namespace DataLayer {
             string[] columnNames = (from dc in dt.Columns.Cast<DataColumn>()
                         select dc.ColumnName).ToArray();
 
-            for (int i = 1; i < columnNames.Length; i++)
+            for (int i = 0; i < columnNames.Length; i++)
             {
                 
                 worksheet.Cells[1, i+1] = columnNames[i];
