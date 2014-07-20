@@ -31,5 +31,10 @@ namespace DataLayer {
             }
             
         }
+
+        public void ExportToExcel()
+        {
+            new Excel(dt);
+        }
         }
     }

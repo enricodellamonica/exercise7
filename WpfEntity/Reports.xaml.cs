@@ -19,16 +19,23 @@ namespace WpfEntity {
     /// Interaction logic for Reports.xaml
     /// </summary>
     public partial class Reports : Window {
+        FetchData fetch = new FetchData(Expense.Id);
+
         public Reports() {
             InitializeComponent();
             }
 
         private void View_Click(object sender, RoutedEventArgs e)
         {
-            var fetch = new FetchData(Expense.Id);
+            
             DataGrid1.ItemsSource = fetch.dt.DefaultView;
             
 
         }
+
+        private void Report_Click(object sender, RoutedEventArgs e)
+        {
+            fetch.ExportToExcel();
+            }
         }
     }
